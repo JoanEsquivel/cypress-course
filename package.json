@@ -1,0 +1,23 @@
+{
+  "name": "cypress-course",
+  "version": "1.0.0",
+  "description": "This is going go to be the project for udemy about Cypress.Io",
+  "main": "index.js",
+  "scripts": {
+    "runner": "cypress open --e2e --browser chrome --config baseUrl=http://uitestingplayground.com --env demoVar=Hello_From_Package_File"
+  },
+  "keywords": [
+    "cypress",
+    "javascript",
+    "typescript",
+    "testing"
+  ],
+  "author": "Joan Esquivel",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^10.4.0",
+    "cypress-real-events": "^1.7.1",
+    "cypress-xpath": "^2.0.1",
+    "typescript": "^4.7.4"
+  }
+}
