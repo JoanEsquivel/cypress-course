@@ -1,21 +1,19 @@
 describe("Demo QA", () => {
   beforeEach(() => {
-    cy.visit(`${Cypress.env("demoQA")}/checkbox`);
+    cy.visit(`${Cypress.env("demoQA")}/buttons`);
   });
-  it("Checkbox scenario", () => {
-    cy.get('input[type="checkbox"]').click({ force: true });
-    cy.get("#result").should(
+  it("Double Click Test", () => {
+    cy.get("#doubleClickBtn").dblclick();
+    cy.get("#doubleClickMessage").should(
       "have.text",
-      "You have selected :homedesktopnotescommandsdocumentsworkspacereactangularveuofficepublicprivateclassifiedgeneraldownloadswordFileexcelFile"
+      "You have done a double click"
     );
   });
-});
-
-describe.only("The internet app", () => {
-  beforeEach(() => {
-    cy.visit(`${Cypress.env("theInternet")}/checkboxes`);
-  });
-  it("Checkbox scenario", () => {
-    cy.get("form#checkboxes input").eq(0).click().should("be.checked");
+  it("Right Click Test", () => {
+    cy.get("#rightClickBtn").rightclick();
+    cy.get("#rightClickMessage").should(
+      "have.text",
+      "You have done a right click"
+    );
   });
 });
