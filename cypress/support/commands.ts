@@ -1,3 +1,5 @@
+import "cypress-file-upload";
+require("cy-verify-downloads").addCustomCommand();
 /// <reference types="cypress" />
 // ***********************************************
 // This example commands.ts shows you how to
