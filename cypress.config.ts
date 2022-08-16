@@ -23,5 +23,5 @@ export default defineConfig({
   },
   pageLoadTimeout: 60000,
   viewportHeight: 1000,
-  viewportWidth: 1400,
+  viewportWidth: 1200,
 });
