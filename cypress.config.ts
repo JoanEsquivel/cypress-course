@@ -20,6 +20,7 @@ export default defineConfig({
       //Mobile Validation
       mobileViewportWidthBreakpoint: 400,
     },
+    experimentalSessionAndOrigin: true,
   },
   pageLoadTimeout: 60000,
   viewportHeight: 1000,
