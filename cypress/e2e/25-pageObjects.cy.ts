@@ -7,9 +7,6 @@ describe("Basics", () => {
   });
 
   it("Sucess Login Scenario", () => {
-    // cy.get("#userName").type("test");
-    // cy.get("#password").type(""Test1234*"");
-    // cy.get("#login").click();
     LoginPage.usernameElement.type("test");
     LoginPage.passwordElement.type("Test1234*");
     LoginPage.loginElement.click();
@@ -22,7 +19,6 @@ describe("Basics", () => {
   it("Wrong User Login Scenario", () => {
     LoginPage.submitLogin("wrongUser", "wrongPassword");
     cy.url().should("not.contain", "profile");
-    // cy.get("#name").should("have.text", "Invalid username or password!");
     LoginPage.invalidLoginMessageElement.should(
       "have.text",
       "Invalid username or password!"
