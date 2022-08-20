@@ -17,6 +17,7 @@
 import "./commands";
 import "./exceptions";
 import "cypress-real-events/support";
+import "cypress-mochawesome-reporter/register";
 require("cypress-xpath");
 
 // Alternatively you can use CommonJS syntax:

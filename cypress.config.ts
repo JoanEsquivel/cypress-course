@@ -9,6 +9,9 @@ export default defineConfig({
       //Verify download import
       on("task", { isFileExist, findFiles });
       //--------------------
+      //For the mochawesome reporter
+      require("cypress-mochawesome-reporter/plugin")(on);
+      //---------------------
     },
     env: {
       demoVar: "Hello from the Cypress.Config.Ts",
@@ -25,4 +28,16 @@ export default defineConfig({
   pageLoadTimeout: 60000,
   viewportHeight: 1000,
   viewportWidth: 1200,
+  reporter: "cypress-mochawesome-reporter",
+  reporterOptions: {
+    charts: true,
+    reportPageTitle: "Udemy Course Report",
+    embeddedScreenshots: true,
+    inlineAssets: true,
+    saveAllAttempts: false,
+  },
+  retries: {
+    runMode: 2,
+    openMode: 1,
+  },
 });
