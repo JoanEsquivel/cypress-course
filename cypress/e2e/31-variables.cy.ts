@@ -1,25 +1,22 @@
+let externalVariable: string = "test";
 describe("Basics", () => {
   beforeEach(() => {
     cy.visit(`dynamicid`);
   });
   it("Find by text", function () {
-    let text: string;
-
-    cy.contains("Button with Dynamic ID")
+    cy.contains("button", "Button with Dynamic ID")
       .invoke("text")
-      .then((elementText: string) => {
-        cy.log(elementText);
-        let text = elementText;
-        cy.wrap(text).as("textAsAnAlias");
-        cy.log("Text from variable: " + text);
+      .then((text) => {
+        externalVariable = text;
+        cy.wrap(externalVariable).as("textFromContains");
+        cy.log(externalVariable);
       });
-    cy.get("@textAsAnAlias").then((text) => {
-      cy.log("Text from variable outside then : " + text);
+    cy.get("@textFromContains").then((text) => {
+      cy.log("This is the contains text outside the closure: " + text);
     });
-    cy.log("Text from variable outside then : " + text);
   });
   it("Sharing context by Alias", function () {
-    let text: string = this.textAsAnAlias;
-    cy.log(text);
+    externalVariable = this.textFromContains;
+    cy.log(externalVariable);
   });
 });
