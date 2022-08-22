@@ -25,6 +25,8 @@
     "cypress-real-events": "^1.7.1",
     "cypress-xpath": "^2.0.1",
     "node-xlsx": "^0.21.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "mysql": "github:mysqljs/mysql"
   }
+
 }
