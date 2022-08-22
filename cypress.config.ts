@@ -1,6 +1,10 @@
 import { defineConfig } from "cypress";
 //Verify download import
 const { isFileExist, findFiles } = require("cy-verify-downloads");
+//Excel requirements
+const xlsx = require("node-xlsx").default;
+const fs = require("fs"); // for file
+const path = require("path"); // for file path
 
 export default defineConfig({
   e2e: {
@@ -9,6 +13,20 @@ export default defineConfig({
       //Verify download import
       on("task", { isFileExist, findFiles });
       //--------------------
+      //Excel implementation
+      on("task", {
+        parseXlsx({ filePath }) {
+          return new Promise((resolve, reject) => {
+            try {
+              const jsonData = xlsx.parse(fs.readFileSync(filePath));
+              resolve(jsonData);
+            } catch (e) {
+              reject(e);
+            }
+          });
+        },
+      });
+      //------------------
       //For the mochawesome reporter
       require("cypress-mochawesome-reporter/plugin")(on);
       //---------------------
