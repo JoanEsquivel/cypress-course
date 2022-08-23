@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "runner": "cypress open --e2e --browser chrome --config baseUrl=http://uitestingplayground.com --env demoVar=Hello_From_Package_File",
-    "cypress-run": "cypress run --browser chrome --spec cypress/e2e/26-customCommands.cy.ts"
+    "cypress-run": "cypress run --browser chrome --spec cypress/e2e/26-customCommands.cy.ts",
+    "runner-mobile": "cypress open --e2e --browser chrome --config baseUrl=http://uitestingplayground.com,viewportWidth=100 --env demoVar=Hello_From_Package_File"
   },
   "keywords": [
     "cypress",
