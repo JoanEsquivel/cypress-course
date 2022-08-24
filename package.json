@@ -6,7 +6,8 @@
   "scripts": {
     "runner": "cypress open --e2e --browser chrome --config baseUrl=http://uitestingplayground.com --env demoVar=Hello_From_Package_File",
     "cypress-run": "cypress run --browser chrome --spec cypress/e2e/26-customCommands.cy.ts --record --key 94abf18e-7fa6-4292-bdf0-11a0e8d16c71",
-    "runner-mobile": "cypress open --e2e --browser chrome --config baseUrl=http://uitestingplayground.com,viewportWidth=100 --env demoVar=Hello_From_Package_File"
+    "runner-mobile": "cypress open --e2e --browser chrome --config baseUrl=http://uitestingplayground.com,viewportWidth=100 --env demoVar=Hello_From_Package_File",
+    "cypress-dashboard-parallel": "cypress run --record --key 94abf18e-7fa6-4292-bdf0-11a0e8d16c71 --parallel --spec cypress/e2e/parallel-test/*.ts --browser chrome"
   },
   "keywords": [
     "cypress",
