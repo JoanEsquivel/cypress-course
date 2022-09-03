@@ -1,3 +1,4 @@
+// declare var require: any
 import { defineConfig } from "cypress";
 //Verify download import
 const { isFileExist, findFiles } = require("cy-verify-downloads");
@@ -70,6 +71,8 @@ export default defineConfig({
       },
       //Mobile Validation
       mobileViewportWidthBreakpoint: 400,
+      user: "test",
+      password: ""
     },
     experimentalSessionAndOrigin: true,
   },
