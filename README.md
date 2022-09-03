@@ -49,3 +49,6 @@ How to run the project?
 - Install Node JS
 - Run the command "npm i"
 - Run a script in the package.json
+
+How to update the Cypress dependecy?
+npm install -D cypress@x.x.x
