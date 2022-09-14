@@ -27,6 +27,8 @@ Topics reviewed:
 * API Testing overview using a Bearer Token! Constructing the request with custom options.
 * Cypress Dashboard Integration
 * Parallel Execution using GitHub Actions
+* Use environment variables and hide sensitive data.
+* cy.origin()
 
 Dependencies:
 - Typescript - https://docs.cypress.io/guides/tooling/typescript-support: npm install --save-dev typescript
