@@ -32,6 +32,16 @@ require("cypress-xpath");
 //     cy.get("#login").click();
 //     cy.url().should("contain", "profile");
 //   });
+// ----------- STUDENT QUESTION ------------------
+// cy.log("Global Hook Here");
+//   cy.log("Test skip validation").then(() => {
+//     if (Cypress.currentTest.title.includes("No Login")) {
+//       cy.log("Skipping login action");
+//     } else {
+//       cy.log("Doing Login");
+//     }
+//   });
+// ----------- *************** ------------------
 // });
 
 // after(() => {
