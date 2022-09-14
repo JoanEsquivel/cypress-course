@@ -75,6 +75,7 @@ export default defineConfig({
       password: ""
     },
     experimentalSessionAndOrigin: true,
+    experimentalWebKitSupport: true,
   },
   pageLoadTimeout: 60000,
   viewportHeight: 1000,
