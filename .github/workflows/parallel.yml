@@ -31,3 +31,9 @@ jobs:
           # Recommended: pass the GitHub token lets this action correctly
           # determine the unique run id necessary to re-run the checks
           # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: cypress-report
+        path: cypress/reports/html
+        retention-days: 30
