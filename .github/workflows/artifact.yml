@@ -2,7 +2,7 @@ name: Artifacts
 
 on: [push]
 
-obs:
+jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
