@@ -18,9 +18,9 @@
   "author": "Joan Esquivel",
   "license": "ISC",
   "devDependencies": {
-    "@4tw/cypress-drag-drop": "^2.2.1",
+    "@4tw/cypress-drag-drop": "^2.2.2",
     "@faker-js/faker": "^7.6.0",
-    "@testing-library/cypress": "^8.0.3",
+    "@testing-library/cypress": "^8.0.7",
     "cy-verify-downloads": "^0.1.11",
     "cypress": "11.0.1",
     "cypress-file-upload": "^5.0.8",
