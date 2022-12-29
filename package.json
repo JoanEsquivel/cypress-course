@@ -26,7 +26,7 @@
     "cypress-file-upload": "^5.0.8",
     "cypress-mochawesome-reporter": "^3.2.3",
     "cypress-real-events": "^1.7.6",
-    "cypress-xpath": "^2.0.1",
+    "@cypress/xpath": "^2.0.3",
     "mysql": "github:mysqljs/mysql",
     "node-xlsx": "^0.21.0",
     "playwright-webkit": "^1.29.1",
